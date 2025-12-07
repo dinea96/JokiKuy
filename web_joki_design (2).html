@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JokiKuy – Jasa Joki Tugas & Desain Pelajar/Mahasiswa </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #E0F2FE; /* soft sky */
+            color: #0F172A; /* dark navy */
+            margin: 0;
+            padding: 28px;
+        }
+        .header {
+            background: linear-gradient(135deg, #0F172A 0%, #3B82F6 100%);
+            color: white;
+            padding: 36px 20px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(15,23,42,0.12);
+            text-align: center;
+        }
+        .container {
+            max-width: 920px;
+            margin: 22px auto;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 18px;
+            box-shadow: 0 6px 18px rgba(11, 27, 55, 0.06);
+            border: 1px solid rgba(59,130,246,0.12);
+        }
+        h1 { margin: 0; font-size: 28px; }
+        h2 { color: #0F172A; margin-top: 0; }
+        p { line-height: 1.45; }
+        .price-box {
+            background: #F3F9FF;
+            border-left: 6px solid #3B82F6;
+            padding: 14px;
+            border-radius: 10px;
+        }
+        label { display:block; font-weight:600; margin-top:8px; }
+        input[type="text"], select, textarea {
+            width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #DCEFFF; box-sizing:border-box;
+        }
+        .btn-wa {
+            display:inline-block; background:#25D366; color:#ffffff; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700; border:none; cursor:pointer; margin-top:12px;
+        }
+        .btn-primary {
+            background: #3B82F6; color: white; padding:10px 16px; border-radius:10px; border:none; cursor:pointer; font-weight:700;
+        }
+        footer { text-align:center; color:#25406a; margin-top:28px; font-size:14px; }
+        ul { margin:8px 0 0 18px; }
+        .muted { color:#5b6b86; font-size:14px; opacity:1; }
+.header .muted { color:#DCEBFF; opacity:1; }
+        .note { background:#FBFEFF; border:1px dashed #CFEAFE; padding:10px; border-radius:8px; font-size:14px; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>JokiKuy</h1>
+    <p class="muted">Jasa Joki Tugas & Desain Pelajar/Mahasiswa — Cepat • Rapi • Terjangkau</p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <h2>✨ Tentang JokiKuy</h2>
+        <p>JokiKuy membantu kebutuhan tugas dan desain sekolah atau kampus: makalah, PPT aesthetic, poster, pamflet, sampul majalah, kalender, konten promosi makanan, dan lainnya. Kami prioritaskan rapi, mudah, dan sesuai selera pelajar/mahasiswa.</p>
+        <p class="muted"><strong>Catatan:</strong> Maksimal 2x revisi. Pembayaran: DP 50% di awal, sisa setelah preview selesai.</p>
+    </section>
+
+    <section class="card">
+        <h2>💸 Harga Pelajar/Mahasiswa </h2>
+        <div class="price-box">
+            <p>• Makalah: <b>Rp 2.000 / halaman</b></p>
+            <p>• PPT: <b>Rp 5.000 / 5 slide</b></p>
+            <p>• Poster / Pamflet / Flyer: <b>Rp 15.000 / desain</b></p>
+            <p>• Cover Buku / Sampul Majalah: <b>Rp 15.000</b></p>
+            <p>• Kalender, brosur, konten makanan: <b>Mulai Rp 15.000</b></p>
+        </div>
+        <p class="muted">Harga khusus Pelajar/Mahasiswa — ringan di kantong, kualitas tetap OK ✨</p>
+    </section>
+
+    <section class="card">
+        <h2>📝 Order Cepat — Isi Form & Kirim via WhatsApp</h2>
+        <p>Isi form di bawah, lalu klik tombol <em>"Kirim via WhatsApp"</em>. WhatsApp akan terbuka dengan pesan terisi otomatis yang langsung terkirim ke mimin.</p>
+
+        <label for="nama">Nama</label>
+        <input id="nama" type="text" placeholder="Nama lengkap">
+
+        <label for="jenis">Jenis Pesanan</label>
+        <select id="jenis">
+            <option value="Makalah">Makalah</option>
+            <option value="PPT">PPT</option>
+            <option value="Poster">Poster</option>
+            <option value="Pamflet">Pamflet</option>
+            <option value="Sampul Majalah">Sampul Majalah</option>
+            <option value="Cover Buku">Cover Buku</option>
+            <option value="Kalender">Kalender</option>
+            <option value="Brosur">Brosur</option>
+            <option value="Desain Makanan">Desain Makanan</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <label for="materi">Link Materi (Google Drive / Foto) — <span class="muted">atau tulis "N/A" jika belum</span></label>
+        <input id="materi" type="text" placeholder="https://drive.google.com/....">
+
+        <label for="deadline">Deadline</label>
+        <input id="deadline" type="text" placeholder="Contoh: 20 Januari 2025">
+
+        <label for="catatan">Catatan Tambahan</label>
+        <textarea id="catatan" placeholder="Warna, referensi, atau instruksi khusus" rows="4"></textarea>
+
+        <p class="note">Catatan: Jika ingin <strong>mengunggah file</strong> (PDF/Word/Gambar), silakan upload ke Google Drive lalu tempel link di kolom "Link Materi". Untuk saat ini file tidak otomatis dikirim lewat WhatsApp.</p>
+
+        <button class="btn-primary" type="button" onclick="sendToWa()">Kirim via WhatsApp</button>
+    </section>
+
+    <section class="card">
+        <h2>🌷 Sedekah Semangat untuk Mimin (Opsional)</h2>
+        <p>Kalau kamu mau bantu mimin biar makin semangat ngerjain tugas kalian, boleh banget kasih dukungan kecil — tapi ini <em>opsional</em> saja.</p>
+        <ul>
+            <li>✧ Kirim kata-kata penyemangat</li>
+            <li>✧ Tambah tips / tip seikhlasnya</li>
+            <li>✧ Doa & support supaya mimin semangat kerja</li>
+        </ul>
+        <p class="muted">Ga wajib yaa — cukup support kalian aja mimin udah senang 💜</p>
+    </section>
+
+    <section class="card">
+        <h2>✨ Bonus untuk Pelanggan</h2>
+        <ul>
+            <li>✧ Quotes penyemangat tugas</li>
+            <li>✧ Reminder friendly untuk deadline</li>
+            <li>✧ File revisi rapi sesuai format</li>
+        </ul>
+    </section>
+
+</main>
+
+<script>
+function sendToWa() {
+    // ambil value
+    const nama = document.getElementById('nama').value.trim();
+    const jenis = document.getElementById('jenis').value;
+    const materi = document.getElementById('materi').value.trim();
+    const deadline = document.getElementById('deadline').value.trim();
+    const catatan = document.getElementById('catatan').value.trim();
+
+    // validasi sederhana
+    if (!nama) {
+        alert('Tolong isi nama.');
+        return;
+    }
+    if (!jenis) {
+        alert('Pilih jenis pesanan.');
+        return;
+    }
+
+    const message = `Halo min! Aku mau order desainnya.%0A%0ANama: ${nama}%0AJenis Pesanan: ${jenis}%0ALink Materi: ${materi || 'N/A'}%0ADeadline: ${deadline || 'N/A'}%0ACatatan: ${catatan || ' - '}`;
+
+    const waNumber = '6283133414836'; // nomor tanpa + dan 0
+    const url = `https://wa.me/${waNumber}?text=${message}`;
+
+    // buka tab baru ke WhatsApp
+    window.open(url, '_blank');
+}
+</script>
+
+<footer>
+    © 2025 JokiKuy — Hubungi: <b>0831-3341-4836</b>
+</footer>
+
+</body>
+</html>
