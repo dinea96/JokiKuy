@@ -70,7 +70,7 @@
 
     <section class="card">
         <h2>✨ Tentang JokiKuy</h2>
-        <p>JokiKuy membantu kebutuhan tugas dan desain sekolah atau kampus: makalah, PPT aesthetic, poster, pamflet, sampul majalah, kalender, konten promosi makanan, dan lainnya. Kami prioritaskan rapi, mudah, dan sesuai selera pelajar/mahasiswa.</p>
+        <p>JokiKuy membantu kebutuhan tugas dan desain sekolah atau kampus mulai dari makalah, PPT, poster, pamflet, cover buku, kalender, dan lainnya. Kami prioritaskan rapi, mudah, dan sesuai selera pelajar/mahasiswa.</p>
         <p class="muted"><strong>Catatan:</strong> Maksimal 2x revisi. Pembayaran: DP 50% di awal, sisa setelah preview selesai.</p>
     </section>
 
@@ -81,7 +81,7 @@
             <p>• PPT: <b>Rp 5.000 / 5 slide</b></p>
             <p>• Poster / Pamflet / Flyer: <b>Rp 15.000 / desain</b></p>
             <p>• Cover Buku / Sampul Majalah: <b>Rp 15.000</b></p>
-            <p>• Kalender, brosur, konten makanan: <b>Mulai Rp 15.000</b></p>
+            <p>• Kalender, brosur, katalog: <b>Mulai Rp 15.000</b></p>
         </div>
         <p class="muted">Harga khusus Pelajar/Mahasiswa — ringan di kantong, kualitas tetap OK ✨</p>
     </section>
@@ -103,33 +103,35 @@
             <option value="Cover Buku">Cover Buku</option>
             <option value="Kalender">Kalender</option>
             <option value="Brosur">Brosur</option>
-            <option value="Desain Makanan">Desain Makanan</option>
             <option value="Lainnya">Lainnya</option>
         </select>
+        
+        <div id="lainnyaBox" style="display:none; margin-top:10px;">
+            <label for="lainnyaInput">Tulis jenis pesanan lainnya</label>
+            <input id="lainnyaInput" type="text" placeholder="Contoh: Banner, Feed Instagram, CV, dll">
+        </div>
 
-        <label for="materi">Link Materi (Google Drive / Foto) — <span class="muted">atau tulis "N/A" jika belum</span></label>
-        <input id="materi" type="text" placeholder="https://drive.google.com/....">
+        <label for="materi">Link Materi (opsional) </span></label>
+        <input id="materi" type="text" placeholder="https://...">
 
         <label for="deadline">Deadline</label>
-        <input id="deadline" type="text" placeholder="Contoh: 20 Januari 2025">
+        <input id="deadline" type="text" placeholder="Contoh: 20 Januari 2026">
 
         <label for="catatan">Catatan Tambahan</label>
         <textarea id="catatan" placeholder="Warna, referensi, atau instruksi khusus" rows="4"></textarea>
 
-        <p class="note">Catatan: Jika ingin <strong>mengunggah file</strong> (PDF/Word/Gambar), silakan upload ke Google Drive lalu tempel link di kolom "Link Materi". Untuk saat ini file tidak otomatis dikirim lewat WhatsApp.</p>
+        <p class="note">Catatan: Jika ingin <strong>mengunggah file</strong> (PDF/Word/Gambar), silakan upload ke Google Drive lalu tempel link di kolom "Link Materi" atau kirim lewat via WhatsApp.</p>
 
         <button class="btn-primary" type="button" onclick="sendToWa()">Kirim via WhatsApp</button>
     </section>
 
     <section class="card">
         <h2>🌷 Sedekah Semangat untuk Mimin (Opsional)</h2>
-        <p>Kalau kamu mau bantu mimin biar makin semangat ngerjain tugas kalian, boleh banget kasih dukungan kecil — tapi ini <em>opsional</em> saja.</p>
+        <p>Kalau kamu mau bantu mimin biar makin semangat ngerjain tugas kalian, boleh banget kasih dukungan kecil lewat tip seiklasnya — 
         <ul>
-            <li>✧ Kirim kata-kata penyemangat</li>
-            <li>✧ Tambah tips / tip seikhlasnya</li>
-            <li>✧ Doa & support supaya mimin semangat kerja</li>
+            
         </ul>
-        <p class="muted">Ga wajib yaa — cukup support kalian aja mimin udah senang 💜</p>
+        <p class="muted">Ga wajib yaa — cukup lewat kepercayaan kalian order di JokiKuy aja mimin udah senang 💜</p>
     </section>
 
     <section class="card">
@@ -162,7 +164,7 @@ function sendToWa() {
         return;
     }
 
-    const message = `Halo min! Aku mau order desainnya.%0A%0ANama: ${nama}%0AJenis Pesanan: ${jenis}%0ALink Materi: ${materi || 'N/A'}%0ADeadline: ${deadline || 'N/A'}%0ACatatan: ${catatan || ' - '}`;
+    const message = `Halo min JokiKuy! Aku mau order.%0A%0ANama: ${nama}%0AJenis Pesanan: ${jenis}%0ALink Materi: ${materi || 'N/A'}%0ADeadline: ${deadline || 'N/A'}%0ACatatan: ${catatan || ' - '}`;
 
     const waNumber = '6283133414836'; // nomor tanpa + dan 0
     const url = `https://wa.me/${waNumber}?text=${message}`;
